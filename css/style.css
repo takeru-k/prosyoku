@@ -726,7 +726,7 @@
 .p-top-feature__img > img{
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;      /* 余白なくトリミング */
   border-radius: var(--radius);
   background: #eee;       /* 画像未読込時の背景 */
