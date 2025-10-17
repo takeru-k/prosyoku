@@ -670,6 +670,7 @@
   font-family: var(--english-font);
   font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
   margin-top: min(8vw, 40px);
+  font-family: var(--title-font);
 }
 
 @media (min-width: 1024px){
