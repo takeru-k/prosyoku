@@ -630,10 +630,35 @@
 
 @media (min-width: 1024px){
   .l-page-title + .l-block{
-  margin-top: 120px;
-}
+    margin-top: 120px;
+  }
 }
 
+.l-page-header{
+  margin-top: 100px;
+  padding: 0;
+}
+
+.l-page-header span{
+  display: block;
+  color: var(--sub-color);
+  text-transform: uppercase;
+  font-family: var(--english-font);
+  letter-spacing: .15em;
+}
+
+.l-page-header h1{
+  font-size: clamp(2rem, 1.727rem + 1.36vw, 2.75rem);
+  font-family: var(--title-font);
+  font-weight: normal;
+  color: var(--main-color);
+}
+
+@media (min-width: 768px){
+  .l-page-header{
+    margin-top: 140px;
+  }
+}
 /*================================
 	main-visual
 =================================*/
@@ -1412,4 +1437,87 @@
 	  padding: 28px 0 28px;
 	  border-top: solid 1px #e6e6e6;
 	}
+}
+
+/*================================
+	カテゴリ
+=================================*/
+
+.p-category{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 30px;
+}
+
+.p-category a{
+  text-decoration: underline;
+}
+
+@media (min-width: 1024px){
+  .p-category{
+    gap: 28px 40px;
+  }
+}
+
+/*================================
+	チーズ一覧
+=================================*/
+
+.p-inventory{
+  margin-top: min(8vw, 60px);
+  display: grid;
+  row-gap: 28px;
+}
+
+.p-inventory__image img{
+  border: 1px solid #f0f0f0;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.p-inventory__content{
+  margin-top: 16px;
+}
+
+.p-inventory__cat{
+  font-size: 14px;
+  color: var(--sub-color);
+}
+
+.p-inventory__title{
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.p-inventory__desc{
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem) /* 14-16px */;
+  margin-top: 12px;
+}
+
+.p-inventory__info{
+  margin-top: 20px;
+  border-top: solid 1px #e6e6e6;
+  padding-top: 15px;
+  display: grid;
+  row-gap: 8px;
+}
+
+.p-inventory__info dl{
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px){
+  .p-inventory{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 40px;
+  }
+}
+
+@media (min-width: 1024px){
+  .p-inventory{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 48px;
+  }
 }
