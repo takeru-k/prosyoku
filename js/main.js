@@ -41,9 +41,11 @@ const slide = {
 // === hamburger ===
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".js-btn");
+
   const targetElements = document.querySelectorAll(
-    ".l-header__nav, .c-hamburger__line"
+    ".l-header, .l-header__nav, .c-hamburger__line"
   );
+
   if (button) {
     button.addEventListener("click", () => {
       targetElements.forEach((el) => el.classList.toggle("open"));
